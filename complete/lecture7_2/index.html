@@ -25,9 +25,13 @@
         <script type="module">
             import { Game } from './Game.js';
 
+            // Expõe a CLASSE Game para o escopo global (window)
+            // Isso permite que você a acesse pelo console
+            window.Game = Game; 
+
             document.addEventListener("DOMContentLoaded", function(){
                 const game = new Game();
-                window.game = game;
+                window.game = game; // Já está expondo a INSTÂNCIA 'game'
             });
         </script>
 	</body>
